@@ -1,0 +1,106 @@
+<!--    <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="container-fluid">
+          <div class="navbar-nav ">
+            <a class="navbar-brand bigbrand" href="{% url 'index' %}">Zoomin Photography</a>
+            <a class="nav-item nav-link "href="{% url 'blog' %}">Blog</a>
+          </div>
+            <div class="navbar-nav align-right">
+              {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="#"><span class="fa fa-user"></span></a>
+              <p class='nav-item nav-link'>Welcome {{user.username}}!</p>
+              <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+              <a class='nav-item nav-link' href="mailto:pradeepravi17301@gmai.com"><span class='fa fa-envelope'></span></a>
+              <a class='nav-item nav-link' href="https://www.instagram.com/__.zoomin_photography.__/" target='blank'><img id='insta-logo' src="static/images/insta.png" alt="insta"></a>
+              {% else %}
+              <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Login</a>
+              <a class="nav-item nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
+              {% endif %}
+
+          </div>
+        </div>
+    </nav> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/master.css">
+  </head>
+  <body class-'body'>
+    <nav class='navbar navbar-expand-md navbar-light bg-light'>
+      <a class='navbar-brand bigbrand' href='#'>zoomin_photography</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id='navbarTogglerDemo01'>
+        <a class='nav-item nav-link' href='#'>Blog</a>
+          <div class="navbar-nav ml-auto">
+            <a class='nav-item nav-link'>Welcome</a>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                contact
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Mail</a>
+                <a class="dropdown-item" href="#">Insta</a>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand bigbrand" href="{% url 'index' %}">Zoomin Photography</a>
+  <a class="nav-item nav-link "href="{% url 'blog' %}">Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id='navbarTogglerDemo01'>
+        <div class="navbar-nav ml-auto ">
+<!--                <div class="navbar-nav align-right">  -->
+              {% if user.is_authenticated %}
+<!--                <a class="nav-item nav-link" href="#"><span class="fa fa-user"></span></a>  -->
+                <p class='nav-item nav-link'>Welcome {{user.username}}!</p>
+                <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                <a class='nav-item nav-link' href="mailto:pradeepravi17301@gmai.com"><span class='fa fa-envelope'></span></a>
+                <a class='nav-item nav-link' href="https://www.instagram.com/__.zoomin_photography.__/" target='blank'><img id='insta-logo' src="{% static 'images/insta.png'%}" alt="insta"></a>
+              {% else %}
+  <!--          </div>  -->
+
+              <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Login</a>
+              <a class="nav-item nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
+              {% endif %}
+          </div>
+        </div>
+    </div>
+
+
+    </nav>

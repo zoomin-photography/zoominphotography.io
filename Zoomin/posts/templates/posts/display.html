@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron jumbotron-welcome">
+  <h3 id='gallery'>Gallery</h3>
+  <hr class='horizontal'>
+  <div class="jumbotron jumbotron-welcome">
+    <div class="row">
+    {% for post in images %}
+            <div class="col-lg-4 col-6 ">
+              <img src="{{ post.new_photo.url }}" class="img-thumbnail img-fluid" />
+            </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

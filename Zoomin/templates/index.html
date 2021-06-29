@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron jumbotron-welcome">
+  <h3 id='welcome'>Welcome to Zoomin Photography</h3>
+  <p id='contactinformation'><a href="{% url 'posts:display' %}">View more on gallery</a></p>
+    {% if user.is_authenticated %}
+    {% else %}
+    <p id='contactinformation'>(Login for Contact Information)</p>
+    {% endif %}
+  <hr class='horizontal'>
+<div class="jumbotron jumbotron-welcome">
+  <div class="row">
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src='/static/images/30.jpg' alt="one"</img></div>
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src="/static/images/44.jpg" alt="two"</img></div>
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src="/static/images/49.jpg" alt="two"</img></div>
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src='/static/images/7.jpg' alt="one"</img></div>
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src="/static/images/27.jpg" alt="two"</img></div>
+    <div class="col-lg-4 col-6 "><img class="img-thumbnail img-fluid"src="/static/images/26.jpg" alt="two"</img></div>
+
+  </div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
